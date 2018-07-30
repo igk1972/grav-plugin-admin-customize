@@ -1,0 +1,29 @@
+name: Admin Customize
+version: 1.0.0
+description: "Customize Admin-plugin."
+icon: empire
+author:
+  name: Igor Kuznetsov
+  email: igk@igk.ru
+  url: https://igk.ru
+homepage: https://github.com/igk1972/grav-plugin-admin-customize
+keywords: admin, plugin, customize, admin-customize
+bugs: https://github.com/igk1972/grav-plugin-admin-customize
+license: MIT
+dependencies:
+  - { name: grav, version: '>=1.4' }
+  - { name: admin, version: '>=1.3.2' }
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin Status
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
