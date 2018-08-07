@@ -1,3 +1,90 @@
 #admin-topbar #admin-mode-toggle {
   display: none;
 }
+
+@media only all and (min-width: 47.938em) {
+  #admin-sidebar {
+    float: none;
+    position: inherit;
+    max-height: none;
+    width: 100%;
+  }
+  #admin-sidebar .admin-menu-wrapper {
+    width: auto;
+    height: auto;
+    max-height: 3.3rem;
+  }
+  #admin-sidebar #open-handle {
+    display: none;
+  }
+  #admin-logo {
+    float: left;
+    background: inherit;
+    height: auto;
+  }
+  #admin-logo h3 {
+    margin-left: 1rem;
+    transform: translateY(25%);
+    font-size: 1.5rem;
+  }
+  #admin-menu {
+  }
+  #admin-menu > li {
+    display: table-cell;
+    white-space: nowrap;
+  }
+  #admin-menu li a {
+    padding: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  #admin-menu li .badges {
+    margin-right: 0;
+    float: none;
+  }
+  #admin-menu li.selected a {
+    background: inherit;
+    border-left: none;
+  }
+  #admin-menu li.selected a,
+  #admin-menu li.selected a .fa,
+  #admin-menu li.selected .badges .count {
+    color: #64b6e7;
+  }
+  #admin-menu li.selected a {
+    padding-left: 1.5rem;
+  }
+  #admin-main {
+    margin-left: 0;
+    margin: auto;
+    max-width: 73rem;
+  }
+  .dropzone .dz-preview {
+    margin: 1rem 0.15rem 1.0rem 1rem;
+  }
+}
+  
+@media only all and (max-width: 74.938em) and (min-width: 47.938em) {
+  #admin-sidebar .admin-menu-wrapper {
+    max-height: 4.0rem;
+  }
+  #admin-logo h3 {
+    margin-left: 1rem;
+    transform: translateY(40%);
+    font-size: 1.5rem;
+  }
+  #admin-logo h3:first-letter {
+    font-size: inherit;
+  }
+  #admin-menu li a .fa,
+  #admin-menu li.selected a .fa {
+    margin-right: 0;
+  }
+  #admin-menu li.selected a {
+    padding-left: 1rem;
+  }
+  #admin-menu li a {
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+}
