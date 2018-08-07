@@ -1,4 +1,12 @@
 {% extends 'partials/base-root.html.twig' %}
 
+{% do assets.addCss('plugin://admin-customize/css/customize.css', 100, true, 'bottom') %}
+{% do assets.addJs(base_url_simple~'/system/assets/jquery/jquery-3.x.min.js', 100) %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  {{ assets.css('bottom')|raw }}
+{% endblock %}
+
 {% block footer %}
 {% endblock %}
