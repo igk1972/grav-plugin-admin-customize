@@ -45,7 +45,7 @@ class AdminCustomizePlugin extends Plugin
      */
     public function onAdminTwigTemplatePaths($event)
     {
-        $event['paths'] = [__DIR__ . '/admin/themes/grav/templates'];
+        $event['paths'] = array_merge($event['paths'], [__DIR__ . '/admin/themes/grav/templates']);
         //$this->grav['twig']->twig_paths[] = __DIR__ . '/admin/themes/grav/templates';
     }
 
