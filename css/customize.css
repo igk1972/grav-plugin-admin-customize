@@ -92,3 +92,27 @@ button[data-gpm-checkupdates] {
     padding: 1rem;
   }
 }
+
+
+.page-item__tools > * {
+  display: none;
+}
+.page-item__row:hover .page-item__tools > * {
+  display: inline-block;
+}
+
+
+.page-item > .depth-1[style="display:none;"] {
+  display: block !important;
+}
+
+
+.pages-list .row .badge.lang.info {
+  background-color: #e3e3e3;
+  color: gray;
+}
+
+*[data-page-toggleall="expand"],
+*[data-page-toggleall="collapse"] {
+  display: none;
+}
