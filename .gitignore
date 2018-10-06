@@ -6,9 +6,7 @@ logs
 *.old
 npm-debug.log*
 
-vendor
 node_modules
-php_packages
 
 pids
 *.pid
