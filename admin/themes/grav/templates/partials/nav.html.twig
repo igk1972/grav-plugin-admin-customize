@@ -42,41 +42,9 @@
                         {% endif %}
                     {% endfor %}
                 {% endif %}
-                {% if authorize(['admin.plugins', 'admin.super']) %}
-                    <li class="{{ (location == 'plugins') ? 'selected' : '' }}">
-                        <a href="{{ base_url_relative }}/plugins">
-                            <i class="fa fa-fw fa-plug"></i>
-                            <em>{{ "PLUGIN_ADMIN.PLUGINS"|tu }}</em>
-                            <span class="badges">
-                                <span class="badge updates"></span>
-                                <span class="badge count">{{ admin.plugins|length }}</span>
-                            </span>
-                        </a>
-                    </li>
-                {% endif %}
-                {% if authorize(['admin.themes', 'admin.super']) %}
-                    <li class="{{ (location == 'themes') ? 'selected' : '' }}">
-                        <a href="{{ base_url_relative }}/themes">
-                            <i class="fa fa-fw fa-tint"></i>
-                            <em>{{ "PLUGIN_ADMIN.THEMES"|tu }}</em>
-                            <span class="badges">
-                                <span class="badge updates"></span>
-                                <span class="badge count">{{ admin.themes|length }}</span>
-                            </span>
-                        </a>
-                    </li>
-                {% endif %}
                 {% if authorize(['admin.configuration', 'admin.super']) %}
                     <li class="{{ (location == 'system' or location == 'site' or location == 'config') ? 'selected' : '' }}">
                         <a href="{{ base_url_relative }}/config/system"><i class="fa fa-fw fa-wrench"></i><em>{{ "PLUGIN_ADMIN.CONFIGURATION"|tu }}</em></a>
-                    </li>
-                {% endif %}
-                {% if authorize(['admin.tools']) %}
-                    <li class="{{ (location == 'tools') ? 'selected' : '' }}">
-                        <a href="{{ base_url_relative }}/tools">
-                            <i class="fa fa-fw fa-briefcase"></i>
-                            <em>{{ "PLUGIN_ADMIN.TOOLS"|tu }}</em>
-                        </a>
                     </li>
                 {% endif %}
 
