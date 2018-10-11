@@ -1,3 +1,8 @@
+form .large, 
+form .large.form-input-addon-wrapper input {
+  max-width: 100% !important;
+}
+
 #admin-topbar #admin-mode-toggle {
   display: none;
 }
