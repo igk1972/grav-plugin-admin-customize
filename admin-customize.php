@@ -16,7 +16,9 @@ class AdminCustomizePlugin extends Plugin
     public static function getSubscribedEvents()
     {
         return [
-            'onPluginsInitialized' => ['onPluginsInitialized', 0]
+            'onPluginsInitialized' => ['onPluginsInitialized', 0],
+            'onGetPageBlueprints'  => ['onGetPageBlueprints', 0],
+            'onGetPageTemplates'   => ['onGetPageTemplates', 0],
         ];
     }
 
@@ -47,6 +49,30 @@ class AdminCustomizePlugin extends Plugin
     {
         $event['paths'] = array_merge($event['paths'], [__DIR__ . '/admin/themes/grav/templates']);
         //$this->grav['twig']->twig_paths[] = __DIR__ . '/admin/themes/grav/templates';
+    }
+
+    /**
+     * Add page blueprints
+     *
+     * @param Event $event
+     */
+    public function onGetPageBlueprints(Event $event)
+    {
+        /** @var Types $types */
+        $types = $event->types;
+        $types->scanBlueprints('user://blueprints/pages/');
+    }
+
+    /**
+     * Add page template types.
+     *
+     * @param Event $event
+     */
+    public function onGetPageTemplates(Event $event)
+    {
+        /** @var Types $types */
+        $types = $event->types;
+        $types->scanTemplates('user://templates/pages/');
     }
 
 }
