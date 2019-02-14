@@ -48,6 +48,7 @@ class AdminCustomizePlugin extends Plugin
     public function onAdminTwigTemplatePaths($event)
     {
         $event['paths'] = array_merge($event['paths'], [__DIR__ . '/admin/themes/grav/templates']);
+        $event['paths'] = array_merge($event['paths'], Grav::instance()['locator']->findResources('user://templates/pages'));
         //$this->grav['twig']->twig_paths[] = __DIR__ . '/admin/themes/grav/templates';
     }
 
