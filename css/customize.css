@@ -2,7 +2,12 @@
   height: calc(100vh - 6.5rem);
 }
 
-form .large, 
+form .required {
+  display: inline-block;
+  margin-bottom: -13px;
+}
+
+form .large,
 form .large.form-input-addon-wrapper input {
   max-width: 100% !important;
 }
@@ -79,7 +84,7 @@ button[data-gpm-checkupdates] {
     margin: 1rem 0.15rem 1.0rem 1rem;
   }
 }
-  
+
 @media only all and (max-width: 74.938em) and (min-width: 47.938em) {
   #admin-sidebar .admin-menu-wrapper {
     max-height: 4.0rem;
