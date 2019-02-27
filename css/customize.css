@@ -21,7 +21,7 @@ button[data-gpm-checkupdates] {
 }
 
 .form-tabs .tabs-nav {
-  justify-content: space-between;
+  justify-content: start;
   overflow-x: auto;
 }
 .form-tabs .tabs-nav a {
