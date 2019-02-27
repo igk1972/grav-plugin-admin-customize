@@ -20,6 +20,21 @@ button[data-gpm-checkupdates] {
   display: none;
 }
 
+.form-tabs .tabs-nav {
+  justify-content: space-between;
+  overflow-x: auto;
+}
+.form-tabs .tabs-nav a {
+  -webkit-box-flex: initial;
+  -moz-box-flex: initial;
+  box-flex: initial;
+  -webkit-flex: initial;
+  -moz-flex: initial;
+  -ms-flex: initial;
+  flex: initial;
+  padding: 4px 12px;
+}
+
 @media only all and (min-width: 47.938em) {
   #admin-sidebar {
     float: none;
